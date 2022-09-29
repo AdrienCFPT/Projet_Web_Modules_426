@@ -153,17 +153,17 @@ body>header>ul {
     align-items: center;
 }
 
-a {
+body>header>ul>li>a {
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
-a:hover {
+body>header>ul>li>a:hover {
     color: rgb(255, 255, 255);
     margin-bottom: 20%;
 }
 
-a::before {
+body>header>ul>li>a::before {
     content: "";
     display: block;
     width: 100%;
@@ -174,9 +174,9 @@ a::before {
     transition: transform 0.3s ease;
 }
 
-a:hover::before {
+body>header>ul>li>a:hover::before {
     transform: scaleX(1);
-    
+
 }
 
 body>footer {
@@ -192,8 +192,77 @@ body>footer {
 }
 
 
-main.equipe{
+main.equipe {
     display: flex;
-    justify-content:;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+}
+
+h2.equipe {
+    margin-top: 20px;
+    color: white;
+}
+
+body.equipe {
+    background-color: white;
+    background-image: url(../img/fondQuatar.png);
+}
+
+p.date_creation,
+p.coach,
+p.nom_equipe {
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+article.equipe {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+div.equipe {
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(14.9px);
+-webkit-backdrop-filter: blur(14.9px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.FakeCreation {
+    color: white;
+    text-decoration: none;
+}
+
+.creation {
+    margin-left: 70%;
+}
+
+.btnCreer {
+   /* From https://css.glass */
+background: rgba(255, 255, 255, 0);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(14.9px);
+-webkit-backdrop-filter: blur(14.9px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 100%;
+    border: none;
+    padding: 20px;
+}
+
+.btnCreer:hover {
+    border: 1px solid white;
 }

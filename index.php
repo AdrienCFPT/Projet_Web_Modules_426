@@ -1,5 +1,6 @@
 <?php
-$changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT)
+$changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
+$stopbutton = 0;
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -26,17 +27,23 @@ $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT)
         <h1>KDAM</h1>
         <ul>
             <li><a href="">Homepage</a></li>
-            <li><a href="">Match</a></li>
-            <li><a href="pages/equipe.html">Equipe</a></li>
+            <li><a href="pages/match.php">Match</a></li>
+            <li><a href="pages/equipe.php">Equipe</a></li>
             <li><a href="">Joueurs</a></li>
         </ul>
         <form action="Connection/connection.php" method="post">
-            <!-- <?php
-            if ($changementPage == 1) {
+        <?php
+            if(isset( $_GET['value']))
+            {
+               if($_GET['value'] == "1") {
                 echo "<img name=\"imgLogin\" id=\"imgLogin\" src=\"img/BonomeConnection.jpg\" alt=\"Connection\">";
+                $stopbutton = 1;
+            }            
             }
-            ?> -->
-            <button type="submit" id="btnlogin">Login</button>
+            if ($stopbutton != 1) {
+                echo "<button type=\"submit\" id=\"btnlogin\">Login</button>";
+            }
+            ?>
             <div id="langue">
                 <a href="indexEn.html">EN</a>
                 <p>|</p>
