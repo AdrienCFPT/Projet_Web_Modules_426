@@ -28,7 +28,7 @@
                     $conn->exec($sql);
                 }
             ?>
-            <META http-EQUIV="Refresh" CONTENT="5; url=../index.html">
+            <META http-EQUIV="Refresh" CONTENT="5; url=../index.php?value=1">
             <h1 id="chronometre">5</h1>
         </div>
         <script src="../js/redirection.js"></script>
