@@ -7,7 +7,7 @@ $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT)
         Projet: SCRUM
         Details: page index fr
         Date: 15.09.2022
-        Auteurs: Muthulingam Kajan, Gavin Adrien
+        Auteurs: Muthulingam Kajan, Gavin Adrien,Shah Fahad
      -->
 
 <head>
@@ -24,55 +24,18 @@ $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT)
 <body>
     <header>
         <h1>KDAM</h1>
-        <ul class="navigation">
-            <li>
-                <a href="#">
-                    <span class="icon">
-                        <ion-icon name="home-outline"></ion-icon>
-                    </span>
-                    <span class="text">Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="Connection/connection.php">
-                    <span class="icon">
-                        <ion-icon name="person-outline"></ion-icon>
-                        </ion-icon>
-                    </span>
-                    <span class="text">Profile</span>
-                </a>
-            </li>
-            <li>
-                <a href="equipe.php">
-                    <span class="icon">
-                        <ion-icon name="create-outline"></ion-icon>
-                    </span>
-                    <span class="text">Edit</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon">
-                        <ion-icon name="football-outline"></ion-icon>                    
-                    </span>
-                    <span class="text">Match</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon">
-                        <ion-icon name="settings-outline"></ion-icon>
-                    </span>
-                    <span class="text">Settings</span>
-                </a>
-            </li>
+        <ul>
+            <li><a href="">Homepage</a></li>
+            <li><a href="">Match</a></li>
+            <li><a href="pages/equipe.html">Equipe</a></li>
+            <li><a href="">Joueurs</a></li>
         </ul>
         <form action="Connection/connection.php" method="post">
-            <?php
+            <!-- <?php
             if ($changementPage == 1) {
                 echo "<img name=\"imgLogin\" id=\"imgLogin\" src=\"img/BonomeConnection.jpg\" alt=\"Connection\">";
             }
-            ?>
+            ?> -->
             <button type="submit" id="btnlogin">Login</button>
             <div id="langue">
                 <a href="indexEn.html">EN</a>
