@@ -211,7 +211,9 @@ body.equipe {
 
 p.date_creation,
 p.coach,
-p.nom_equipe {
+p.nom_equipe,
+p.stade,
+p.date {
     color: white;
     margin-bottom: 10px;
     margin-top: 10px;
