@@ -6,7 +6,7 @@
 /* font-family: 'Raleway', sans-serif; */
 body {
     width: 100vw;
-    height: 200vh;
+    height: 350vh;
     display: flex;
     flex-direction: column;
     background-color: wheat;
@@ -19,7 +19,7 @@ body {
 /* Header */
 header {
     width: 100%;
-    height: 5%;
+    height: 3%;
     background: linear-gradient(89.94deg, #950B32 0.05%, #2B010F 99.94%);
     display: flex;
     align-items: center;

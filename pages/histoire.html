@@ -1,9 +1,5 @@
-<!-- <?php
-$nom_equipe = filter_input(INPUT_POST, "nom_equipe", FILTER_UNSAFE_RAW);
-?> -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,13 +20,10 @@ $nom_equipe = filter_input(INPUT_POST, "nom_equipe", FILTER_UNSAFE_RAW);
             <li><a href="./equipe.html">Equipe</a></li>
             <li><a href="./">Joueurs</a></li>
             <li><a href="./histoire.html">Histoire</a></li>
+            <li><a href="./classement.html">Classement</a></li>
+
         </ul>
         <form action="Connection/connection.php" method="post">
-            <!-- <?php
-            if ($changementPage == 1) {
-                echo "<img name=\"imgLogin\" id=\"imgLogin\" src=\"img/BonomeConnection.jpg\" alt=\"Connection\">";
-            }
-            ?> -->
             <button type="submit" id="btnlogin">Login</button>
             <div id="langue">
                 <a href="indexEn.html">EN</a>
