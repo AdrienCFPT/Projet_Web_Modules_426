@@ -37,13 +37,13 @@ $nbJoueurs = filter_input(INPUT_POST, "nbJoueurs", FILTER_UNSAFE_RAW);
                     <div class="column">
 
                         <label for="nomEquipe">Nom Equipe<span style="color: crimson;"> :</span></label><br>
-                        <input type="text" id="nomEquipe" name="nomEquipe" placeholder="Juventus"><br>
+                        <input type="text" id="nomEquipe" name="nomEquipe" placeholder="Suisse"><br>
 
                         <label for="nomCoach">Nom Coach<span style="color: crimson;"> :</span></label><br>
-                        <input type="text" id="nomCoach" name="nomCoach" placeholder="Patrick"><br>
+                        <input type="text" id="nomCoach" name="nomCoach" placeholder="Murat Yakin"><br>
 
                         <label for="nbJoueurs">Date création <span style="color: crimson;"> :</span></label><br>
-                        <input type="text" id="nbJoueurs" name="nbJoueurs" placeholder="21"><br>
+                        <input type="text" id="nbJoueurs" name="nbJoueurs" placeholder="1955"><br>
                     </div>
                     <div class="column">
                     </div>
@@ -74,7 +74,7 @@ $nbJoueurs = filter_input(INPUT_POST, "nbJoueurs", FILTER_UNSAFE_RAW);
             nom_equipe = '".$nom_equipe."'");
             $sth->fetch(PDO::FETCH_NUM);
             $sql = "INSERT INTO Equipe (nom_equipe, NomEtEquipeAjouter, NomEntraineur, dateX)
-            VALUES ('$nomEquipe', '$user', '$nomCoach', '$nomCoach')";
+            VALUES ('$nomEquipe', '$user', '$nomCoach', '$nbJoueurs')";
             $conn->exec($sql);
             $sql = "";
             $nomEquipe = "";
