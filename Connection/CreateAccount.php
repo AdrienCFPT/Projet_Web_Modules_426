@@ -23,7 +23,7 @@
             $username = filter_input(INPUT_POST, "username", FILTER_UNSAFE_RAW);
             $password = filter_input(INPUT_POST, "password", FILTER_UNSAFE_RAW);
 
-            echo "Bonjour $username, vous merci de votre connection";
+            echo "Bonjour $username, merci d'avoir crée un compte. Vous êtes maintenant connecté";
             $sql = "INSERT INTO utilisateur (nom_utilisateur, mot_de_passe)
             VALUES ('$username', '$password')";
             $date = new DateTime();
@@ -33,7 +33,7 @@
             $conn->exec($sql);
             $conn->exec($sql1);
             ?>
-            <META http-EQUIV="Refresh" CONTENT="5; url=../index.html">
+            <META http-EQUIV="Refresh" CONTENT="5; url=../index.php?value=1">
             <h1 id="chronometre">5</h1>
         <script src="../js/redirection.js"></script>
 </body>

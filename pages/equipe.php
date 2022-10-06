@@ -1,5 +1,6 @@
 <!-- <?php
 $nom_equipe = filter_input(INPUT_POST, "nom_equipe", FILTER_UNSAFE_RAW);
+$changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
 ?> -->
 <!DOCTYPE html>
 <html lang="en">
@@ -54,18 +55,20 @@ $nom_equipe = filter_input(INPUT_POST, "nom_equipe", FILTER_UNSAFE_RAW);
     <header>
         <h1>KDAM</h1>
         <ul>
-            <li><a href="../index.php">Homepage</a></li>
+            <li><a href="../index.php?value= <?php echo $changementPage?>">Homepage</a></li>
             <li><a href="">Match</a></li>
             <li><a href="">Equipe</a></li>
             <li><a href="">Joueurs</a></li>
         </ul>
-        <form action="Connection/connection.php" method="post">
-            <!-- <?php
+        <form action="../Connection/connection.php" method="post">
+            <?php
             if ($changementPage == 1) {
-                echo "<img name=\"imgLogin\" id=\"imgLogin\" src=\"img/BonomeConnection.jpg\" alt=\"Connection\">";
+            echo "<img name=\"imgLogin\" id=\"imgLogin\" src=\"../img/BonomeConnection.jpg\" alt=\"Connection\">";
             }
-            ?> -->
-            <button type="submit" id="btnlogin">Login</button>
+            else {
+            echo "<button type=\"submit\" id=\"btnlogin\">Login</button>";
+            }
+            ?>
             <div id="langue">
                 <a href="indexEn.html">EN</a>
                 <p>|</p>
@@ -111,10 +114,13 @@ $nom_equipe = filter_input(INPUT_POST, "nom_equipe", FILTER_UNSAFE_RAW);
 
         </article>
         <article class="creation">
-            <button class="btnCreer">
+        <?php if ($changementPage == 1) {
+            ?>
+                <button class="btnCreer">
                 <a class="FakeCreation" href="formEquipe.php">Ajouter une équipe</a>
-            </button>
-           
+                </button>
+                <?php
+            } ?>         
         </article>
         
     </main>
