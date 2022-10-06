@@ -54,7 +54,7 @@ $nom_equipe = filter_input(INPUT_POST, "nom_equipe", FILTER_UNSAFE_RAW);
     <header>
         <h1>KDAM</h1>
         <ul>
-            <li><a href="">Homepage</a></li>
+            <li><a href="../index.php">Homepage</a></li>
             <li><a href="">Match</a></li>
             <li><a href="">Equipe</a></li>
             <li><a href="">Joueurs</a></li>
@@ -80,7 +80,7 @@ $nom_equipe = filter_input(INPUT_POST, "nom_equipe", FILTER_UNSAFE_RAW);
         <article class="equipe">
         <div class="equipe">
             <p class="nom_equipe">Suisse</p>
-            <p class="coach">Vladimir Petcovich</p>   
+            <p class="coach">Murat Yakin</p>   
             <p class="date_creation">1955</p>
         </div>
         <?php
