@@ -1,3 +1,9 @@
+<?php
+$stade = filter_input(INPUT_POST, "stade", FILTER_UNSAFE_RAW);
+$nomEquipeDom = filter_input(INPUT_POST, "nomEquipeDom", FILTER_UNSAFE_RAW);
+$NomEquipeExt = filter_input(INPUT_POST, "NomEquipeExt", FILTER_UNSAFE_RAW);
+$dateMatch = filter_input(INPUT_POST, "dateMatch", FILTER_UNSAFE_RAW);
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -27,7 +33,7 @@
 
                 <h2>Remplissez le formulaire ci-dessous</h2>
                 <br>
-
+                <form method="post">
                 <div class="row">
                     <div class="column">
 
@@ -46,15 +52,39 @@
                     <div class="column">
                     </div>
                 </div>
-                <a href="#">
                     <span></span>
                     <span></span>
                     <span></span>
-                    <span></span> Ajouter des données
-                </a>
+                    <span></span> <button type="submit">Ajouter des données</button>
             </div>
+            </form>
         </div>
     </div>
+    <?php
+            $servername = 'localhost';
+            $username = 'adriengvn';
+            $password = 'root';
+            
+            //On établit la connexion
+            $conn = new PDO("mysql:host=$servername;dbname=Jeudi_Database", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            /*session created*/
+            session_start();
+                $user = $_SESSION['username'];
+
+            if ($nomEquipeDom != "") {
+            /*$sth = $conn->prepare("SELECT count(*) FROM Match where 
+            stade = '".$stade."'");
+            $sth->fetch(PDO::FETCH_NUM);*/
+            $sql = "INSERT INTO Matchs (stade, equipeDomicile, equipeExterieur, dateMatch, nomAjouterPersonne)
+            VALUES ('$stade', '$nomEquipeDom', '$NomEquipeExt', '$dateMatch', '$user')";
+            $conn->exec($sql);
+            $sql = "";
+            $nomEquipe = "";
+            header('Location: match.html');
+            }
+    ?>
     <div id="rtrn">
         <a href="equipe.html">
             <span></span>   
