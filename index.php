@@ -35,17 +35,23 @@ if ($changementPage == 1) {
             <li><a href="">Joueurs</a></li>
         </ul>
         <form action="Connection/connection.php" method="post">
-        <?php
-            if(isset( $_GET['value']))
-            {
+           <!--if(isset( $_GET['value']))
+                 {
                if($_GET['value'] == "1" || $stopbutton == 1) {
                 echo "<img name=\"imgLogin\" id=\"imgLogin\" src=\"img/BonomeConnection.jpg\" alt=\"Connection\">";
             } 
         }           
             else if($stopbutton == 0) {
                 echo "<button type=\"submit\" id=\"btnlogin\">Login</button>";
+            } 
+            <form action="../Connection/connection.php" method="post">-->
+            <?php
+            if ($changementPage == 1) {
+            echo "<img name=\"imgLogin\" id=\"imgLogin\" src=\"img/BonomeConnection.jpg\" alt=\"Connection\">";
             }
-
+            else {
+            echo "<button type=\"submit\" id=\"btnlogin\">Login</button>";
+            }
             ?>
             <div id="langue">
                 <a href="indexEn.html">EN</a>
