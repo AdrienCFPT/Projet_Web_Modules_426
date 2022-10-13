@@ -35,9 +35,9 @@ $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
             }
             ?>
             <div id="langue">
-                <a href="indexEn.html">EN</a>
+                <a href="">EN</a>
                 <p>|</p>
-                <a href="index.html">FR</a>
+                <a href="">FR</a>
             </div>
         </form>
     </header>
@@ -51,7 +51,7 @@ $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
                 compétition
                 internationale en Suisse, qui sera refusée par les britanniques. Le premier tournoi mondial officiel de
                 football à lieu lors des Jeux olympiques à partir de 1908. Ce n'est qu'en 1930, sous l'impulsion de son
-                président, Jules Rimet1, que la FIFA inaugurera la Coupe du monde de football.</p>
+                président, Jules Rimet, que la FIFA inaugurera la Coupe du monde de football.</p>
         </div>
         <div>
             <p> La Coupe du monde de football 2022 est la 22e édition de la Coupe du monde de football, compétition
@@ -59,7 +59,7 @@ $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
                 par la FIFA et qui réunit les meilleures sélections nationales. Elle se déroulera au Qatar du 20
                 novembre au
                 18
-                décembre 20221, jour de la fête nationale du Qatar et une semaine avant Noël, avec une estimation du
+                décembre 2022, jour de la fête nationale du Qatar et une semaine avant Noël, avec une estimation du
                 marché
                 télévisuel potentiel à 3,2 milliards de téléspectateurs. La période inédite à laquelle se déroulera le
                 tournoi
@@ -81,7 +81,7 @@ $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
                 Plus
                 de 37 ouvriers étrangers trouvent la mort sur les chantiers du Mondial 2022 selon les sources
                 gouvernementales,
-                un chiffre que de nombreuses organisations et journalistes estiment fortement sous-évalué2.</p>
+                un chiffre que de nombreuses organisations et journalistes estiment fortement sous-évalué.</p>
         </div>
 
         <div>
@@ -89,12 +89,12 @@ $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
                 (depuis
                 1998). En 2018, la FIFA envisage cependant la possibilité d'anticiper le passage du tournoi à 48 équipes
                 prévu
-                pour 2026 et de l'appliquer en 20223,4, mais elle renonce à cette idée dès le printemps 2019 en raison
+                pour 2026 et de l'appliquer en 2022, mais elle renonce à cette idée dès le printemps 2019 en raison
                 de
                 trop
                 grandes difficultés à surmonter pour modifier et adapter une organisation initialement prévue pour
                 accueillir 32
-                équipes et non 485. En novembre 2021, l'équipe du Brésil se qualifie et demeure la seule sélection à
+                équipes et non 48. En novembre 2021, l'équipe du Brésil se qualifie et demeure la seule sélection à
                 avoir
                 disputé l'intégralité des phases finales. Avec l'équipe Auriverde cinq fois titrée, tous les champions
                 du

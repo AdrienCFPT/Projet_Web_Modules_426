@@ -25,7 +25,7 @@
 
                 <input type="submit" id='submit' value='LOGIN' >
 
-                <a href="connection.php">Connexion</a>
+                <a href="connection.php">Crée un compte</a>
             </form>
         </div>
 </body>

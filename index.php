@@ -42,9 +42,9 @@ $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
             }
             ?>
             <div id="langue">
-                <a href="indexEn.html">EN</a>
+                <a href="">EN</a>
                 <p>|</p>
-                <a href="index.html">FR</a>
+                <a href="">FR</a>
             </div>
         </form>
     </header>
