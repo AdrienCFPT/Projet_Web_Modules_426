@@ -1,4 +1,5 @@
 <?php
+$nom_equipe = filter_input(INPUT_POST, "nom_equipe", FILTER_UNSAFE_RAW);
 $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
 ?>
 <!DOCTYPE html>
@@ -16,20 +17,19 @@ $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
     <header>
         <h1>KDAM</h1>
         <ul>
-        <li><a href="../index.php">Homepage</a></li>
-            <li><a href="./match.php">Match</a></li>
-            <li><a href="./equipe.php">Equipe</a></li>
-            <li><a href="./histoire.html">Histoire</a></li>
-            <li><a href="./classement.html">Classement</a></li>
+            <li><a href="../index.php?value=<?php echo $changementPage ?>">Homepage</a></li>
+            <li><a href="./match.php?value=<?php echo $changementPage ?>">Match</a></li>
+            <li><a href="./equipe.php?value=<?php echo $changementPage ?>">Equipe</a></li>
+            <li><a href="./histoire.php?value=<?php echo $changementPage ?>">Histoire</a></li>
+            <li><a href="./classement.php?value=<?php echo $changementPage ?>">Classement</a></li>
         </ul>
-        <form action="Connection/connection.php" method="post">
-             <?php
+        <form action="../Connection/connection.php" method="post">
+        <?php
             if ($changementPage == 1) {
-                echo "<img name=\"imgLogin\" id=\"imgLogin\" src=\"img/BonomeConnection.jpg\" alt=\"Connection\">";
+            echo "<img name=\"imgLogin\" id=\"imgLogin\" src=\"../img/BonomeConnection.jpg\" alt=\"Connection\">";
             }
-
             else {
-                echo "<button type=\"submit\" id=\"btnlogin\">Login</button>";
+            echo "<button type=\"submit\" id=\"btnlogin\">Login</button>";
             }
             ?>
             <div id="langue">
@@ -87,10 +87,13 @@ $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
 
         </article>
         <article class="creation">
-            <button class="btnCreer">
-                <a class="FakeCreation" href="formEquipe.php">Ajouter un Match</a>
-            </button>
-           
+        <?php if ($changementPage == 1) {
+            ?>
+                <button class="btnCreer">
+                <a class="FakeCreation" href="fomMatch.php?value=<?php echo $changementPage ?>">Ajouter un Match</a>
+                </button>
+                <?php
+            } ?>         
         </article>
         
     </main>

@@ -1,9 +1,6 @@
 <?php
-$stopbutton = 0;
+$nom_equipe = filter_input(INPUT_POST, "nom_equipe", FILTER_UNSAFE_RAW);
 $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
-if ($changementPage == 1) {
-    $stopbutton = 1;
-}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -29,24 +26,14 @@ if ($changementPage == 1) {
     <header>
         <h1>KDAM</h1>
         <ul>
-            <li><a href="./index.php">Homepage</a></li>
-            <li><a href="pages/match.php">Match</a></li>
+            <li><a href="./index.php?value=<?php echo $changementPage ?>">Homepage</a></li>
+            <li><a href="pages/match.php?value=<?php echo $changementPage ?>">Match</a></li>
             <li><a href="pages/equipe.php?value=<?php echo $changementPage ?>">Equipe</a></li>
-            <li><a href="pages/histoire.html">Histoire</a></li>
-            <li><a href="pages/classement.html">Classement</a></li>
+            <li><a href="pages/histoire.php?value=<?php echo $changementPage ?>">Histoire</a></li>
+            <li><a href="pages/classement.php?value=<?php echo $changementPage ?>">Classement</a></li>
         </ul>
         <form action="Connection/connection.php" method="post">
-           <!--if(isset( $_GET['value']))
-                 {
-               if($_GET['value'] == "1" || $stopbutton == 1) {
-                echo "<img name=\"imgLogin\" id=\"imgLogin\" src=\"img/BonomeConnection.jpg\" alt=\"Connection\">";
-            } 
-        }           
-            else if($stopbutton == 0) {
-                echo "<button type=\"submit\" id=\"btnlogin\">Login</button>";
-            } 
-            <form action="../Connection/connection.php" method="post">-->
-            <?php
+        <?php
             if ($changementPage == 1) {
             echo "<img name=\"imgLogin\" id=\"imgLogin\" src=\"img/BonomeConnection.jpg\" alt=\"Connection\">";
             }

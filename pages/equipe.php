@@ -1,7 +1,7 @@
-<!-- <?php
+<?php
 $nom_equipe = filter_input(INPUT_POST, "nom_equipe", FILTER_UNSAFE_RAW);
 $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
-?> -->
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,14 +55,14 @@ $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
     <header>
         <h1>KDAM</h1>
         <ul>
-            <li><a href="../index.php?value= <?php echo $changementPage?>">Homepage</a></li>
-            <li><a href="./match.php">Match</a></li>
-            <li><a href="./equipe.php">Equipe</a></li>
-            <li><a href="./histoire.html">Histoire</a></li>
-            <li><a href="./classement.html">Classement</a></li>
+            <li><a href="../index.php?value=<?php echo $changementPage ?>">Homepage</a></li>
+            <li><a href="./match.php?value=<?php echo $changementPage ?>">Match</a></li>
+            <li><a href="./equipe.php?value=<?php echo $changementPage ?>">Equipe</a></li>
+            <li><a href="./histoire.php?value=<?php echo $changementPage ?>">Histoire</a></li>
+            <li><a href="./classement.php?value=<?php echo $changementPage ?>">Classement</a></li>
         </ul>
         <form action="../Connection/connection.php" method="post">
-            <?php
+        <?php
             if ($changementPage == 1) {
             echo "<img name=\"imgLogin\" id=\"imgLogin\" src=\"../img/BonomeConnection.jpg\" alt=\"Connection\">";
             }
@@ -118,7 +118,7 @@ $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
         <?php if ($changementPage == 1) {
             ?>
                 <button class="btnCreer">
-                <a class="FakeCreation" href="formEquipe.php">Ajouter une équipe</a>
+                <a class="FakeCreation" href="formEquipe.php?value=<?php echo $changementPage ?>">Ajouter une équipe</a>
                 </button>
                 <?php
             } ?>         

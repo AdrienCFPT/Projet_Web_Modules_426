@@ -2,6 +2,8 @@
 $nomEquipe = filter_input(INPUT_POST, "nomEquipe", FILTER_UNSAFE_RAW);
 $nomCoach = filter_input(INPUT_POST, "nomCoach", FILTER_UNSAFE_RAW);
 $nbJoueurs = filter_input(INPUT_POST, "nbJoueurs", FILTER_UNSAFE_RAW);
+$nom_equipe = filter_input(INPUT_POST, "nom_equipe", FILTER_UNSAFE_RAW);
+$changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -78,11 +80,11 @@ $nbJoueurs = filter_input(INPUT_POST, "nbJoueurs", FILTER_UNSAFE_RAW);
             $conn->exec($sql);
             $sql = "";
             $nomEquipe = "";
-            header('Location: equipe.php');
+            header("Location: equipe.php?value=$changementPage");
             }
     ?>
     <div id="rtrn">
-        <a href="equipe.php">
+        <a href="equipe.php?value=<?php echo $changementPage ?>">
             <span></span>   
             <span></span>
             <span></span>

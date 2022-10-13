@@ -3,6 +3,8 @@ $stade = filter_input(INPUT_POST, "stade", FILTER_UNSAFE_RAW);
 $nomEquipeDom = filter_input(INPUT_POST, "nomEquipeDom", FILTER_UNSAFE_RAW);
 $NomEquipeExt = filter_input(INPUT_POST, "NomEquipeExt", FILTER_UNSAFE_RAW);
 $dateMatch = filter_input(INPUT_POST, "dateMatch", FILTER_UNSAFE_RAW);
+$nom_equipe = filter_input(INPUT_POST, "nom_equipe", FILTER_UNSAFE_RAW);
+$changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -82,11 +84,11 @@ $dateMatch = filter_input(INPUT_POST, "dateMatch", FILTER_UNSAFE_RAW);
             $conn->exec($sql);
             $sql = "";
             $nomEquipe = "";
-            header('Location: match.html');
+            header("Location: match.php?value=$changementPage");
             }
     ?>
     <div id="rtrn">
-        <a href="equipe.html">
+        <a href="match.php?value=<?php echo $changementPage ?>">
             <span></span>   
             <span></span>
             <span></span>
