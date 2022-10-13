@@ -29,10 +29,11 @@ if ($changementPage == 1) {
     <header>
         <h1>KDAM</h1>
         <ul>
-            <li><a href="">Homepage</a></li>
+            <li><a href="./index.php">Homepage</a></li>
             <li><a href="pages/match.php">Match</a></li>
             <li><a href="pages/equipe.php?value=<?php echo $changementPage ?>">Equipe</a></li>
-            <li><a href="">Joueurs</a></li>
+            <li><a href="pages/histoire.html">Histoire</a></li>
+            <li><a href="pages/classement.html">Classement</a></li>
         </ul>
         <form action="Connection/connection.php" method="post">
            <!--if(isset( $_GET['value']))

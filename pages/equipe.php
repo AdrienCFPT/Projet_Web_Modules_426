@@ -56,9 +56,10 @@ $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
         <h1>KDAM</h1>
         <ul>
             <li><a href="../index.php?value= <?php echo $changementPage?>">Homepage</a></li>
-            <li><a href="">Match</a></li>
-            <li><a href="">Equipe</a></li>
-            <li><a href="">Joueurs</a></li>
+            <li><a href="./match.php">Match</a></li>
+            <li><a href="./equipe.php">Equipe</a></li>
+            <li><a href="./histoire.html">Histoire</a></li>
+            <li><a href="./classement.html">Classement</a></li>
         </ul>
         <form action="../Connection/connection.php" method="post">
             <?php
