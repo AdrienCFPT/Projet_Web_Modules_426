@@ -44,20 +44,6 @@ $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
         <h2 class="equipe">Match</h2>
 
         <article class="equipe">
-            <div class="equipe">
-                <p class="nom_equipe">Real Madrid</p>
-                <p class="nom_equipe">Barcelone</p>   
-                <p class="stade">Camp Nou</p>
-                <p class="date">16 Mars 2023</p>
-        </div>
-
-        <article class="equipe">
-            <div class="equipe">
-                <p class="nom_equipe">Real Madrid</p>
-                <p class="nom_equipe">Barcelone</p>   
-                <p class="stade">Parc des princes</p>
-                <p class="date">12 février 1987</p>
-            </div>
             <?php
             $servername = 'localhost';
             $username = 'adriengvn';

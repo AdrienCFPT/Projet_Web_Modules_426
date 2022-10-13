@@ -82,11 +82,6 @@ $changementPage = filter_input(INPUT_GET, "value", FILTER_VALIDATE_INT);
         <h2 class="equipe">Equipe</h2>
 
         <article class="equipe">
-        <div class="equipe">
-            <p class="nom_equipe">Suisse</p>
-            <p class="coach">Murat Yakin</p>   
-            <p class="date_creation">1955</p>
-        </div>
         <?php
             $servername = 'localhost';
             $username = 'adriengvn';
